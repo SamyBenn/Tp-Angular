@@ -1,0 +1,16 @@
+<!--Component 1 s'occupe de chercher et afficher la liste des bateaux
+    (reference):output de la reference du bateau selectionne
+    [apiUrl]:Url commun entre les 3 appels d'api-->
+<app-rech-bat [apiUrl]="apiUrl" (reference)="selectRef($event)"></app-rech-bat>
+
+<!--Component 2 recupere la reference du 1er pour chercher les mesures par defaut et les affiche,
+    permet de modifier ces valeurs et les valide pour envoyer au 3eme component
+    [ref]:Input de la reference du bateau
+    (mesure):Output d'une liste contenant les mesures
+    [apiUrl]:Url commun entre les 3 appels d'api-->
+<app-info-bat [apiUrl]="apiUrl" [ref]="ref" (mesure)="infoBat($event)"></app-info-bat>
+
+<!--Component 3 Cherche les voiles correspendante aux mesures passees par le component 2 et les affiche avec tous leurs details
+    [mesures]:Input des mesures provenant du Component 2
+    [apiUrl]:Url commun entre les 3 appels d'api-->
+<app-voiles [apiUrl]="apiUrl" [mesures]="mesures"></app-voiles>

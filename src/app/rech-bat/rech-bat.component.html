@@ -1,0 +1,14 @@
+<div class="container row" id="">
+    <div class="col-md-6" id="">
+        <br>
+        <label for="">Modèle de bateau : </label>
+        <input list="bots" type="text" class="col-md-6" (change)="getBateau($event)">
+        <select id="bots" (change)="selectBat($event)">
+            <option *ngFor="let bateau of bateaux; index as i; first as isFirst" value="{{bateau.ref}}">{{bateau.name}}</option>
+        </select>
+        <br><br>
+        <label for="">Longueur : </label>
+        <input class="col-md-4" type="text" id="bpr-length">mètres
+        <br><br>
+    </div>
+</div>

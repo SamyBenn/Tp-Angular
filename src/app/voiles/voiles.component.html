@@ -1,0 +1,9 @@
+<button (click)="getInfoVoile()">GO</button>
+<div class="">
+    <div *ngFor="let voile of voiles">
+        <h4>{{voile.name}}</h4>
+        <p>{{voile.type}}</p>
+        <p [innerHTML]="voile.description"></p>
+        <p>Prix : {{voile.price.unitPrice}}</p>
+    </div>
+</div>

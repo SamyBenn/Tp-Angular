@@ -1,0 +1,42 @@
+<div (onLoad)="getInfoBateau()" class="container" id="boatSelector">
+    <div class="">
+        <div class="">Contrôlez, modifiez ou valider les données de votre bateau</div>
+
+        <div class="">
+            <div class="row">
+                <div class="col-md-3">&nbsp;Les grand-voiles
+                    <ul class="list list-unstyled row">
+                        <li>Semi-lattée : <br><input type="number" min="0" [(ngModel)]="gvsl" id="boatSelector-gvsl" value="{{infoVoile.sails.gvsl}}">&nbsp;m²</li>
+                        <li>Lattée (fullbatten): <br><input type="number" min="0" [(ngModel)]="gvl" id="boatSelector-gvl" value="{{infoVoile.sails.gvl}}">&nbsp;m²</li>
+                        <li>Sur enrouleur de mât : <br><input type="number" min="0"  [(ngModel)]="gve" id="boatSelector-gve" value="{{infoVoile.sails.gve}}">&nbsp;m²</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">&nbsp;Les voiles d'avant
+                    <ul class="list list-unstyled row">
+                        <li>Génois sur enrouleur : <br><input type="number" min="0" [(ngModel)]="ge" id="boatSelector-ge" value="{{infoVoile.sails.ge}}">&nbsp;m²</li>
+                        <li>Génois sur mousquetons: <br><input type="number" min="0" [(ngModel)]="gm" id="boatSelector-gm" value="{{infoVoile.sails.gm}}">&nbsp;m²</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">&nbsp;Les voiles de portant
+                    <ul class="list list-unstyled row">
+                        <li>Spi symétrique : <br><input type="number" [(ngModel)]="ss" min="0" id="boatSelector-ss" value="{{infoVoile.sails.ss}}">&nbsp;m²</li>
+                        <li>Spi asymétrique : <br><input type="number" [(ngModel)]="sa" min="0" id="boatSelector-sa" value="{{infoVoile.sails.sa}}">&nbsp;m²</li>
+                        <li>Gennaker: <br><input type="number" [(ngModel)]="gs" min="0" id="boatSelector-gs" value="{{infoVoile.sails.gs}}">&nbsp;m²</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <small><span class="glyphicon glyphicon-play" aria-hidden="true"></span></small>&nbsp;Longueur de la bôme
+                    <ul class="list-inline list-unstyled">
+                        <li><input type="number" class="" data-foritem="accessories" id="boatSelector-accessories" value="">&nbsp;cm</li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <button (click)="getInfoBateau()" >show</button>
+            <button (click)="valider()" class="btn" type="button" id="">valider</button>           
+        </div>
+    </div>
+</div>
